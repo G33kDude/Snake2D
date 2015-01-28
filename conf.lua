@@ -16,6 +16,6 @@ function love.conf(t)
 	screenH = gameH * gridSize + 8
 	t.title = "Snake"         -- The title of the window the game is in (string)
 	t.author = "GeekDude"     -- The author of the game (string)
-	t.screen.width = screenW  -- The window width (number)
-	t.screen.height = screenH -- The window height (number)
+	t.window.width = screenW  -- The window width (number)
+	t.window.height = screenH -- The window height (number)
 end
