@@ -40,14 +40,14 @@ function love.load()
 	loveInit()
 	tiles = {}
 	gridInit()
-	
+
 	for i=1, snakeLen, 1 do
 		print("Putting snake" .. i .. " at position x" .. snakeX .. " y" .. snakeY)
 		tiles["snake"..i] = {color="green",x=snakeX,y=snakeY}
 		grid[snakeX][snakeY] = "snake"..i
 		snakeY = snakeY + 1
 	end
-	
+
 	tiles.snake1.direction = controls.up
 	tiles.snake1.color = {r=100,g=255,b=100}
 end
@@ -63,7 +63,8 @@ end
 function loveInit()
 	gfx = love.graphics
 	kbd = love.keyboard
-	gfx.setLine(1, "rough")
+	gfx.setLineWidth(1)
+	gfx.setLineStyle("rough")
 end
 
 function gridInit()
